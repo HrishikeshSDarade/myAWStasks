@@ -38,13 +38,18 @@
     "resource_type": "sqs_queue",
     "fifo_queue": false,
     "region": "eu-central-1",
-    "visibility_timeout": 300,
+    "visibility_timeout": 30,
     "delay_seconds": 0,
     "maximum_message_size": 1024,
     "message_retention_period": 60,
     "receive_message_wait_time_seconds": 0,
     "policy": {},
-    "redrive_policy": {},
+    "redrive_policy": {
+      "deadLetterTargetArn": "arn:aws:sqs:eu-central-1:196241772369:dead-letter-queue",
+      "maxReceiveCount": 2
+    },
+    "kms_master_key_id": "b328b33f-51fd-44ab-bdd9-e182a015bffd",
+    "kms_data_key_reuse_period_seconds": 60,
     "content_based_deduplication": false,
     "tags": {}
   },
