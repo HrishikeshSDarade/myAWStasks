@@ -15,15 +15,6 @@ import java.util.Map;
 	aliasName = "learn",
 	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED
 )
-@SqsTriggerEventSource(
-		targetQueue="async_queue",
-		batchSize = 1
-)
-@DependsOn(
-		name = "async_queue",
-		resourceType = ResourceType.SQS_QUEUE
-)
-
 public class SqsHandler implements RequestHandler<Object, Map<String, Object>> {
 
 	public Map<String, Object> handleRequest(Object request, Context context) {

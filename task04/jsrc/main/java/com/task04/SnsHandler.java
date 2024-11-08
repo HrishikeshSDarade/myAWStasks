@@ -15,14 +15,6 @@ import java.util.Map;
 	aliasName = "learn",
 	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED
 )
-@SnsEventSource(
-		targetTopic="lambda_topic"
-)
-@DependsOn(
-		name = "lambda_topic",
-		resourceType = ResourceType.SNS_TOPIC
-)
-
 public class SnsHandler implements RequestHandler<Object, Map<String, Object>> {
 
 	public Map<String, Object> handleRequest(Object request, Context context) {
