@@ -19,6 +19,28 @@
     </properties>
 
     <dependencies>
+
+        <!-- AWS Lambda Events Dependency for SQS and SNS -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-lambda-java-events</artifactId>
+            <version>3.11.0</version> <!-- This version is compatible with Lambda events -->
+        </dependency>
+
+        <!-- AWS SDK for SQS -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-sqs</artifactId>
+            <version>1.12.300</version> <!-- Use the latest SDK version -->
+        </dependency>
+
+        <!-- AWS SDK for SNS -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-sns</artifactId>
+            <version>1.12.300</version> <!-- Use the latest SDK version -->
+        </dependency>
+
         <!-- AWS dependencies-->
         <dependency>
             <groupId>com.amazonaws</groupId>
